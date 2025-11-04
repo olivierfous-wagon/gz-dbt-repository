@@ -6,7 +6,51 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
+        description: sales of Greenweez / we have on row per product_id found in each orders_id
+
+        loaded_at_field: "CAST(date_date AS TIMESTAMP)"
+        freshness:
+          warn_after: {count: 90, period: day}
+
+        tests:
+          - unique:
+              column_name : "(orders_id||'-'||pdt_id)"
+        columns:
+          - name: date_date
+            description: date
+          - name: orders_id
+            description : id of orders
+          - name: pdt_id
+            description: id of product
+          - name: revenue
+            description: revenue
+          - name: quantity
+            description: quantity of products            
+
       - name: product
         identifier: raw_gz_product
+        description: products of Greenweez catalogue and purchase price
+        columns:
+          - name: products_id
+            description: id of products (primary key)
+            tests:
+              - unique
+              - not_null
+          - name : purchase_price
+            description: price of purchases
+
       - name: ship
         identifier: raw_gz_ship
+        description: shipping fee, log cost and ship cost of Greenweez orders
+        columns:
+          - name: orders_id
+            description: id of orders (primary key)
+            tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: fee of shipping
+          - name: logcost
+            description: cost of logistic
+          - name: ship_cost
+            description: cost of shipping
