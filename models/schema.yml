@@ -54,3 +54,71 @@ sources:
             description: cost of logistic
           - name: ship_cost
             description: cost of shipping
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords
+        columns:
+          - name: date_date
+            description: date
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of ads
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook
+        columns:
+          - name: date_date
+            description: date
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of ads
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo
+        columns:
+          - name: date_date
+            description: date
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of ads
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: bing
+        columns:
+          - name: date_date
+            description: date
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of ads
+          - name: impression
+            description: impression
+          - name: click
+            description: click
