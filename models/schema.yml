@@ -144,3 +144,15 @@ models:
             description: impression
           - name: click
             description: click
+
+      - name: int_campaigns_day
+        description: int campaigns model for each day
+        columns:
+          - name: date_date
+            description: date
+          - name: ads_cost
+            description: cost of asd
+          - name: impression
+            description: number of impression
+          - name: click
+            description: number of clicks
