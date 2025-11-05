@@ -21,6 +21,7 @@ SELECT
     ROUND(total_shipping_fee, 2) AS total_shipping_fee,
     ROUND(total_logcost, 2) AS total_logcost,
     ROUND(total_number_of_products_sold, 2) AS total_number_of_products_sold,
-    ROUND(total_revenue / total_number_of_transactions, 2) AS average_basket
+    ROUND(total_revenue / NULLIF(total_number_of_transactions, 0), 2) AS average_basket
 FROM part1
 ORDER BY date_date
+
