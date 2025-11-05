@@ -39,3 +39,7 @@ products_id
 ,ROUND((revenue-purchase_cost),2) AS margin
 
 FROM part2
+
+
+
+
